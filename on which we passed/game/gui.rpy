@@ -87,8 +87,8 @@ define gui.title_text_size = 38
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/owwp_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.main_menu_background = "gui/overlay/owwp_menu.png"
+define gui.game_menu_background = "gui/overlay/game_menu.png"
 
 
 ## Dialogue ####################################################################
@@ -130,7 +130,7 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 200
+define gui.dialogue_xpos = 215
 define gui.dialogue_ypos = 42
 
 ## The maximum width of dialogue text, in pixels.
