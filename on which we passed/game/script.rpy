@@ -105,3 +105,5 @@ label start:
     # This ends the game.
 
     return
+
+##easter egg
