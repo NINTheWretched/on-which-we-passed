@@ -96,11 +96,15 @@ label start:
 
     stop sound
 
-    play sound "passing_car.mp3"
-
     scene bg on which we passed
 
+    play sound "passing_car.mp3"
+
     " "
+
+    scene bg konbini
+
+    "I place 150 yen on the counter, bow, and turn to walk out."
 
     # This ends the game.
 
