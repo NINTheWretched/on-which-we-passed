@@ -9,6 +9,8 @@ define y = Character("Yu")
 
 define h = Character("Hitomi")
 
+define g = Character("Girl")
+
 
 # The game starts here.
 
@@ -104,7 +106,35 @@ label start:
 
     scene bg konbini
 
-    "I place 150 yen on the counter, bow, and turn to walk out."
+    "I take my sandwich from the counter, bowing before I walk away."
+
+    "My feet remain just under my body."
+
+    scene bg lensflare
+
+    play music "audio/but_i_saw_a_piercing_light_last_night.mp3" loop
+
+    "As I open the door, a group of girls runs past."
+
+    "The glare of the sunlight hides their faces, but their figures are clear."
+
+    "They laugh softly, making jokes between one another."
+
+    "I step onto the sidewalk, watching as they turn back to yell something at me."
+
+    y "What are they saying...?"
+
+    "A straggler from the group walks up, coming to a halt just beside me."
+
+    show hitomi lookupstreettst:
+        xalign 0.75
+        yalign -0.50
+
+    g "Sorry about that."
+
+    g "You can just ignore them."
+
+    y "I'm not even sure what they-"
 
     # This ends the game.
 

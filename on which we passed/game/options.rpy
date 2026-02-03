@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.2.2"
+define config.version = "v0.2.5"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -36,8 +36,14 @@ This story is a reflection.
 
 Any similarities to actual persons living or dead is entirely coincidental, but probably inspired...
 
-Special thanks to the internet.
-You have had detrimental effects on my mental health.
+Title Track by onsibuno
+
+Soundtrack by 1'40", chien-ne errant-e, Monplaisir
+
+Soundtrack under the: Attribution 4.0 International license.
+creativecommons.org/licenses/by/4.0/
+
+Special thanks to: all of the artists involved, the internet, and those who believed in me.
 """)
 
 
@@ -76,7 +82,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "audio/on_which_we_passed_theme.mp3"
+define config.main_menu_music = "audio/onsibuno_bagarre_3.mp3"
 
 ##This section can be used to declare audios if needed.
 
