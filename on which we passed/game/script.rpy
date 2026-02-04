@@ -41,26 +41,28 @@ label start:
     "I'm staring into the ceiling."
 
     "My mind is going nowhere."
-
     "I am going nowhere."
 
     "My sister cracks the door, opening it just enough to reveal herself to me."
 
-    i "Yu, I'm heading out."
+    show izumi doorway at right
 
+    i "Yu, I'm heading out."
     i "I love you..."
 
-    y "Yeah."
+    show izumi doorway2 at right
 
+    y "Yeah."
     y "See you in a bit."
 
     "She hesitates, waiting for me to say, 'I love you.' back."
-
     "I never did..."
 
     stop sound
 
     ##change the scene to a train station, then the ground.
+
+label jrstation:
 
     scene bg jrrailway
 
@@ -73,7 +75,6 @@ label start:
     "I still remember when the police came to our door."
 
     "They told us she was involved in a 'human body railway incident.'"
-
     "Dad and I both knew what it meant."
 
     "He didn't go back to work for weeks."
@@ -81,7 +82,6 @@ label start:
     "Not long after, I moved out."
 
     "I think about that night all the time..."
-
     "If I could have stopped it."
 
     "If things would have been different had I just said-"
@@ -91,6 +91,8 @@ label start:
     stop sound
 
     scene bg yusroom
+
+    show izumi doorway2 at right
 
     play sound "audio/computer_hum.mp3" loop
 
@@ -131,11 +133,47 @@ label start:
         yalign -0.50
 
     g "Sorry about that."
-
     g "You can just ignore them."
 
     y "I'm not even sure what they-"
 
+    "The girl's face drops from a smile to utter shock."
+
+    y "Are you alright...?"
+
+    g "Yu...?"
+    g "Yu Sato?"
+
+    "Why does she know my name?"
+
+    g "Your name is Yu, isn't it...?"
+
+    y "Yes..."
+
+    g "Oh my god!"
+
+    h "It's me! Hitomi!"
+    h "Hitomi Yoshinaga, from junior high school!"
+
+    y "Oh..."
+    y "Yeah. I remember you."
+
+    "I'm more surprised that she remembers me."
+
+    y "Nice to see you again."
+
+    h "You too!"
+    h "It's been too long!"
+
+    "Hitomi turns to look at the group of girls, who are now farther up the street."
+    "Their voices echo by, dissipating just beyond where Hitomi and I stand."
+
+    h "I should go."
+    h "They're going to leave me behind."
+
+    "She laughs as she says it, her final giggle letting out into a quiet sigh."
+
+    "Hitomi turns back to me."
     # This ends the game.
 
     return

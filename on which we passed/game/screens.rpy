@@ -245,6 +245,8 @@ screen quick_menu():
         hbox:
             style_prefix "quick"
             style "quick_menu"
+            xalign 0.5
+            yalign 0.99
 
             textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')

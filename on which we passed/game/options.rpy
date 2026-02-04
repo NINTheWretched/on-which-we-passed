@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "v0.2.5"
+define config.version = "v0.2.6"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -43,7 +43,7 @@ Soundtrack by 1'40", chien-ne errant-e, Monplaisir
 Soundtrack under the: Attribution 4.0 International license.
 creativecommons.org/licenses/by/4.0/
 
-Special thanks to: all of the artists involved, the internet, and those who believed in me.
+Special thanks to all of the artists involved, the internet, and those who believed in me.
 """)
 
 
