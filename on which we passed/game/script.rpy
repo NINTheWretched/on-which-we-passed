@@ -40,18 +40,21 @@ label start:
 
     "My sister cracks the door, opening it just enough to reveal herself to me."
 
-    show izumi doorway at right
+    show izumi talk at right
 
     i "Yu, I'm heading out."
     i "I love you..."
 
-    show izumi doorway2 at right
+    show izumi quiet at right
 
     y "Yeah."
     y "See you in a bit."
 
     "She hesitates, waiting for me to say, 'I love you.' back."
     "I never did..."
+
+## SKIP POINT
+    $ renpy.stop_skipping()
 
     stop sound
 
@@ -79,6 +82,9 @@ label jrstation:
 
     "If things would have been different had I just said-"
 
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     stop music
 
     stop sound
@@ -87,27 +93,31 @@ label yuroom2:
 
     scene bg yusroom
 
-    show izumi doorway2 at right
+    show izumi quiet at right
 
     play sound "audio/computer_hum.mp3" loop
 
     y "I love you too."
 
-    stop sound
-
-    scene bg on which we passed
-
-    play sound "passing_car.mp3"
-
-    " "
+## SKIP POINT
+    $ renpy.stop_skipping()
 
     stop sound
+
+label intro_sequence:
+
+    $ renpy.movie_cutscene("videos/owwp_op.webm", delay=None, loops=0, stop_music=False)
+
+## SKIP POINT
+    $ renpy.stop_skipping()
 
 label encounter:
 
-    scene bg konbini
+    scene bg konbi
 
-    "I take my sandwich from the counter, bowing before I walk away."
+##play shop sound of japanese convenience store or checkout
+
+    "I take my sandwich from the counter, and bow before I walk away."
 
 ## insert an "audio" clip of the sliding door sound here so that it carries into the next scene.
 ##play cicadas "sound" on a loop after that (possibly on a fadein.) play low because music
@@ -115,9 +125,9 @@ label encounter:
     play audio "audio/sliding_door.mp3" volume 1.0
     play sound "audio/cicada.mp3" fadein 1.0 volume 0.2 loop
 
-    "The sliding doors open, spitting me out into a street with light afternoon traffic."
-
     scene bg lensflare
+
+    "The sliding doors open, spitting me out into a street with light afternoon traffic."
 
     play music "audio/but_i_saw_a_piercing_light_last_night.mp3" loop
 
@@ -131,6 +141,12 @@ label encounter:
 
     y "What are they saying...?"
 
+## SKIP POINT
+    $ renpy.stop_skipping()
+
+    scene bg street
+
+## show hitomi looking up street smiling
     "A straggler from the group walks up, coming to a halt just beside me."
 
     "It's a girl."
@@ -138,9 +154,7 @@ label encounter:
     "Her face is softened by the shadows of the trees overhead."
 
 ##hitomi smiling-talking-up-street
-    show hitomi lookupstreettst:
-        xalign 0.75
-        yalign -0.50
+    show hitomi smilingtalkingupstreet at right
 
     g "Sorry about that."
 
@@ -156,21 +170,17 @@ label encounter:
 
     "Her face drops from a smile to utter shock."
 
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     $ renpy.movie_cutscene("videos/encounter.webm", delay=None, loops=0, stop_music=False)
 
     y "Are you alright...?"
 
-##hitomi shock-talking
+##hitomi shockedtalking
 
     g "Yu...?"
     g "Yu Sato?"
-
-##insert a video of Yu from Hitomi's view (portrait), slow pan out.
-##in the same video cut to both of them standing face to face (side), slow pan out.
-##find the code to insert a video into renpy.
-
-## change the cut length to 4 seconds for each cut, so that we hold on Yu and the two of them for longer.
-##    $ renpy.movie_cutscene("videos/encounter.webm", delay=None, loops=0, stop_music=False)
 
     "Why does she know my name?"
 
@@ -193,6 +203,9 @@ label encounter:
     h "You too!"
     h "It's been too long!"
 
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     "Hitomi turns to look at the group of girls, who are now farther up the street."
     "Their voices echo by, dissipating just beyond where Hitomi and I stand."
 
@@ -213,8 +226,9 @@ label encounter:
 
     y "Well, I don't really..."
 
-    h "Here! Let's swap numbers."
+    h "I know! Let's swap numbers!"
 
+    y "..."
     y "Okay..."
     y "Sure."
 
@@ -228,6 +242,9 @@ label encounter:
     "As I take it from her hand, she jogs off towards her friends."
 
     "Hesitating slightly, she turns back."
+
+## SKIP POINT
+    $ renpy.stop_skipping()
 
     "The sun envelops her under a blanket of white and red hues."
     "Her shadow reaches out, joining with mine."
@@ -245,8 +262,82 @@ label encounter:
 
     "Hitomi <3"
 
-    # This ends the game.
+label texting:
+
+    scene bg phone
+
+    h "I’m sorry if I was too forward in asking for your number."
+
+## SKIP POINT
+    $ renpy.stop_skipping()
+
+    h "I just thought it would be nice to see you again after so long."
+
+    y "It's alright."
+    y "I don't mind at all."
+
+    "Back in school, Hitomi was always the sociable one."
+    "She ran for class president."
+    "And won of course."
+    "She always answered questions in class."
+    "Made friends with the new students."
+    "Went to all of the dances and events."
+
+    "I never did."
+
+    h "Oh, thank god."
+    h "I don't want to be annoying."
+
+    y "Is that really why you wanted it?"
+
+    h "Wanted what?"
+
+    y "My number."
+
+    h "Oh! Oh!"
+    h "Sorry. I'm stupid."
+    h "Yeah!"
+    h "I just wanted to catch up!"
+    h "Maybe we could get lunch!"
+    h "Or something!"
+    h "I don't know."
+    h "Totally up to you!"
+
+    y "I don't get out much, but I'm fine with that."
+
+    "My stomach is turning at the thought of it."
+
+    "Being around others..."
+
+    "I try not to get close to people anymore."
+
+    y "Was there something specific that you had in mind?"
+
+    h "Do you like coffee?"
+
+    y "I try not to drink it too much, but I like lattes."
+
+    h "Perfect."
+    h "It's settled then."
+    h "How does this Saturday sound?"
+
+    y "I'm free."
+
+    h "Awesome!"
+    h "Let's do 12:30 at Ko Coffee!"
+
+    y "Sounds good."
+    y "I'll see you there."
+
+    h "See you :)"
+
+
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     "END OF CHAPTER 1"
+
+    # This ends the game.
     return
 
 ##easter egg
