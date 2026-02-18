@@ -17,15 +17,9 @@ label start:
 
     stop music
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg yusroom
 
     play sound "audio/computer_hum.mp3" loop
-
-    # These display lines of dialogue.
 
     "Track fourteen ends and the album comes to a full stop."
 
@@ -144,9 +138,12 @@ label encounter:
 ## SKIP POINT
     $ renpy.stop_skipping()
 
-    scene bg street
+    scene bg hittalk
 
 ## show hitomi looking up street smiling
+
+    show hitomi smilingupstreet at right
+
     "A straggler from the group walks up, coming to a halt just beside me."
 
     "It's a girl."
@@ -158,22 +155,57 @@ label encounter:
 
     g "Sorry about that."
 
-##hitomi smiling-eyes-closed
+    show hitomi smilingupstreet at right
+
+menu:
+
+    "Don't worry about it.":
+        jump c1_dwai
+
+    "Were they talking to me?":
+        jump c1_wtttm
+
+label c1_dwai:
+
+    $ menu_flag = True
+
+    show hitomi smilingtalkingupstreet at right
+
+    g "Honestly..."
+    g "Sometimes, they can be so annoying."
+
+    jump c1_fin
+
+label c1_wtttm:
+
+    $ menu_flag = False
+
+    show hitomi smilingtalkingupstreet at right
+
+    g "No..."
+    g "They were yelling to me."
+
+    jump c1_fin
+
+label c1_fin:
+
+    show hitomi smilingeyesclosed
 
     g "You can just ignore them."
 
-##hitomi smiling-talking (mouth open)
+##hitomi smiling-talking-to-yu (mouth open)
 
-    g "They-"
+    g "I'm-"
 
 ##hitomi shock
 
-    "Her face drops from a smile to utter shock."
+    "As she turns to me, the smile drops from her face."
+    "It's as though she has seen a ghost."
 
 ## SKIP POINT
     $ renpy.stop_skipping()
 
-    $ renpy.movie_cutscene("videos/encounter.webm", delay=None, loops=0, stop_music=False)
+    $ renpy.movie_cutscene("videos/enc.webm", delay=None, loops=0, stop_music=False)
 
     y "Are you alright...?"
 
@@ -191,6 +223,8 @@ label encounter:
     g "Oh my god!"
 
     h "It's me! Hitomi!"
+
+    show hitomi smilingeyesclosed
     h "Hitomi Yoshinaga, from junior high school!"
 
     y "Oh..."
@@ -201,6 +235,7 @@ label encounter:
     y "Nice to see you again."
 
     h "You too!"
+    show hitomi smilingeyesclosed
     h "It's been too long!"
 
 ## SKIP POINT
@@ -210,28 +245,35 @@ label encounter:
     "Their voices echo by, dissipating just beyond where Hitomi and I stand."
 
     h "I should go."
+    show hitomi smilingeyesclosed
     h "They're going to leave me behind."
 
     "She laughs as she says it, but her final giggle reveals the truth as it fades into a quiet sigh."
 
     "Hitomi turns back to me."
 
+##hitomi nervous
     h "Hey..."
+##hitomi nervouslookingaside...
     h "We-"
+##hitomi excited
     h "We should hang out soon!"
+##hitomisoftsmiletalking
     h "It would be nice to catch up."
-
+##hitomi smiling quiet
     "Her eyes soften with her smile."
     "She looks deep into my eyes, like she's trying to figure out what I am going to say next..."
 
     y "Well, I don't really..."
 
+    hitomi smilingeyesclosed
     h "I know! Let's swap numbers!"
 
     y "..."
     y "Okay..."
     y "Sure."
 
+##hitomi hand out
     "She stands there beckoning as I dig my phone out from my pocket."
     "I place it in the palm of her hand, and she smiles as she switches between the screens."
 
@@ -321,7 +363,9 @@ label texting:
     h "It's settled then."
     h "How does this Saturday sound?"
 
-    y "I'm free."
+    y "I'm not busy."
+
+    "I'm never busy."
 
     h "Awesome!"
     h "Let's do 12:30 at Ko Coffee!"
@@ -329,7 +373,7 @@ label texting:
     y "Sounds good."
     y "I'll see you there."
 
-    h "See you :)"
+    h "See you!"
 
 
 ## SKIP POINT
