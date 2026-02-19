@@ -189,7 +189,7 @@ label c1_wtttm:
 
 label c1_fin:
 
-    show hitomi smilingeyesclosed
+    show hitomi smilingeyesclosed at right
 
     g "You can just ignore them."
 
@@ -224,7 +224,6 @@ label c1_fin:
 
     h "It's me! Hitomi!"
 
-    show hitomi smilingeyesclosed
     h "Hitomi Yoshinaga, from junior high school!"
 
     y "Oh..."
@@ -235,7 +234,6 @@ label c1_fin:
     y "Nice to see you again."
 
     h "You too!"
-    show hitomi smilingeyesclosed
     h "It's been too long!"
 
 ## SKIP POINT
@@ -245,7 +243,6 @@ label c1_fin:
     "Their voices echo by, dissipating just beyond where Hitomi and I stand."
 
     h "I should go."
-    show hitomi smilingeyesclosed
     h "They're going to leave me behind."
 
     "She laughs as she says it, but her final giggle reveals the truth as it fades into a quiet sigh."
@@ -266,7 +263,6 @@ label c1_fin:
 
     y "Well, I don't really..."
 
-    hitomi smilingeyesclosed
     h "I know! Let's swap numbers!"
 
     y "..."
