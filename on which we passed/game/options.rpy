@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "v0.2.93"
+define config.version = "v0.3.0"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -38,12 +38,12 @@ Any similarities to actual persons living or dead is entirely coincidental, but 
 
 Title Track by onsibuno
 
-Soundtrack by 1'40", chien-ne errant-e, Monplaisir
-
-Soundtrack under the: Attribution 4.0 International license.
-creativecommons.org/licenses/by/4.0/
+Soundtrack by 1'40", oji, chien-ne errant-e, Monplaisir
 
 Special thanks to all of the artists involved, the internet, and those who believed in me.
+
+ST: Attribution 4.0 International license.
+creativecommons.org/licenses/by/4.0/
 """)
 
 

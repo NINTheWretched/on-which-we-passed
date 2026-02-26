@@ -9,6 +9,8 @@ define y = Character("Yu")
 
 define h = Character("Hitomi")
 
+define hheart = Character("Hitomi <3")
+
 define g = Character("Girl")
 
 # The game starts here.
@@ -72,7 +74,7 @@ label jrstation:
     "Not long after, I moved out."
 
     "I think about that night all the time..."
-    "If I could have stopped it."
+    "If I could have stopped her."
 
     "If things would have been different had I just said-"
 
@@ -100,16 +102,16 @@ label yuroom2:
 
 label intro_sequence:
 
-    $ renpy.movie_cutscene("videos/owwp_op.webm", delay=None, loops=0, stop_music=False)
-
-## SKIP POINT
-    $ renpy.stop_skipping()
+    $ renpy.movie_cutscene("videos/owwp_opening.webm", delay=None, loops=0, stop_music=False)
 
 label encounter:
 
     scene bg konbi
 
 ##play shop sound of japanese convenience store or checkout
+
+## SKIP POINT
+    $ renpy.stop_skipping()
 
     "I take my sandwich from the counter, and bow before I walk away."
 
@@ -277,15 +279,17 @@ label c1_fin:
     show hitomi smilingeyesclosed
     y "Sure."
 
-##hitomi hand out
+    show hitomi handout
     "She stands there beckoning as I dig my phone out from my pocket."
+
+    show hitomi smilingeyesclosed
     "I place it in the palm of her hand, and she smiles as she switches between the screens."
 
+    show hitomi handingphone
     "She punches in the numbers, and flips her phone closed with a look of accomplishment."
-
     "She holds my phone back out to me, and puts hers away simultaneously."
 
-##BG CHANGE
+    hide hitomi
     "As I take it from her hand, she jogs off towards her friends."
 
     "Hesitating slightly, she turns back."
@@ -293,6 +297,7 @@ label c1_fin:
 ## SKIP POINT
     $ renpy.stop_skipping()
 
+    scene bg hitomiwa
     "The sun envelops her under a blanket of white and red hues."
     "Her shadow reaches out, joining with mine."
     "Everything that is the person who calls herself Hitomi Yoshinaga, stands just before me."
@@ -300,6 +305,8 @@ label c1_fin:
     "A smile forms across her face."
 
     h "See you soon!"
+
+    scene bg lensflare
 
     "She takes off and rejoins with the group."
 
@@ -316,17 +323,19 @@ label c1_fin:
 
 label texting:
 
-    scene bg phone
-
-    h "I’m sorry if I was too forward in asking for your number."
-
 ## SKIP POINT
     $ renpy.stop_skipping()
 
-    h "I just thought it would be nice to see you again after so long."
+    play music "audio/oji_floatin.mp3" loop
 
-    y "It's alright."
-    y "I don't mind at all."
+    scene bg phone
+
+    hheart ">I’m sorry if I was too forward in asking for your number."
+
+    hheart ">I just thought it would be nice to see you again after so long."
+
+    y "It's alright.<"
+    y "I don't mind at all.<"
 
     "Back in school, Hitomi was always the sociable one."
     "She ran for class president."
@@ -337,25 +346,25 @@ label texting:
 
     "I never did."
 
-    h "Oh, thank god."
-    h "I don't want to be annoying."
+    hheart ">Oh, thank god."
+    hheart ">I don't want to be annoying."
 
-    y "Is that really why you wanted it?"
+    y "Is that really why you wanted it?<"
 
-    h "Wanted what?"
+    hheart ">Wanted what?"
 
-    y "My number."
+    y "My number.<"
 
-    h "Oh! Oh!"
-    h "Sorry. I'm stupid."
-    h "Yeah!"
-    h "I just wanted to catch up!"
-    h "Maybe we could get lunch!"
-    h "Or something!"
-    h "I don't know."
-    h "Totally up to you!"
+    hheart ">Oh! Oh!"
+    hheart ">Sorry. I'm stupid."
+    hheart ">Yeah!"
+    hheart ">I just wanted to catch up!"
+    hheart ">Maybe we could get lunch!"
+    hheart ">Or something!"
+    hheart ">I don't know."
+    hheart ">Totally up to you!"
 
-    y "I don't get out much, but I'm fine with that."
+    y "I don't get out much, but I'm fine with that.<"
 
     "My stomach is turning at the thought of it."
 
@@ -363,35 +372,37 @@ label texting:
 
     "I try not to get close to people anymore."
 
-    y "Was there something specific that you had in mind?"
+    y "Was there something specific that you had in mind?<"
 
-    h "Do you like coffee?"
+    hheart ">Do you like coffee?"
 
-    y "I try not to drink it too much, but I like lattes."
+    y "I try not to drink it too much, but I like lattes.<"
 
-    h "Perfect."
-    h "It's settled then."
-    h "How does this Saturday sound?"
+    hheart ">Perfect."
+    hheart ">It's settled then."
+    hheart ">How does this Saturday sound?"
 
-    y "I'm not busy."
+    y "I'm not busy.<"
 
     "I'm never busy."
 
-    h "Awesome!"
-    h "Let's do 12:30 at Ko Coffee!"
+    hheart ">Awesome!"
+    hheart ">Let's do 12:30 at Ko Coffee!"
 
-    y "Sounds good."
-    y "I'll see you there."
+    y "Sounds good.<"
+    y "I'll see you there.<"
 
-    h "See you!"
-
+    hheart ">See you!"
 
 ## SKIP POINT
     $ renpy.stop_skipping()
 
-    "END OF CHAPTER 1"
+    "END OF DEMO."
+    "THANK YOU FOR PLAYING."
 
     # This ends the game.
     return
+
+    stop music
 
 ##easter egg
