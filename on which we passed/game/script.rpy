@@ -326,7 +326,7 @@ label texting:
 ## SKIP POINT
     $ renpy.stop_skipping()
 
-    play music "audio/oji_floatin.mp3" loop
+    play music "audio/tabasko_after_the_flood.mp3" loop
 
     scene bg phone
 
