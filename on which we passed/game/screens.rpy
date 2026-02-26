@@ -107,6 +107,9 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
+        else:
+            background Image("gui/owwp_textbox.png") ##sets regular text box
+
         text what id "what"
 
 

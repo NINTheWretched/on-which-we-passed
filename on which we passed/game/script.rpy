@@ -140,8 +140,6 @@ label encounter:
 
     scene bg hittalk
 
-## show hitomi looking up street smiling
-
     show hitomi smilingupstreet at right
 
     "A straggler from the group walks up, coming to a halt just beside me."
@@ -150,7 +148,6 @@ label encounter:
 
     "Her face is softened by the shadows of the trees overhead."
 
-##hitomi smiling-talking-up-street
     show hitomi smilingtalkingupstreet at right
 
     g "Sorry about that."
@@ -193,11 +190,11 @@ label c1_fin:
 
     g "You can just ignore them."
 
-##hitomi smiling-talking-to-yu (mouth open)
+    show hitomi smilingeyesopenht at right
 
     g "I'm-"
 
-##hitomi shock
+    show hitomi shocked
 
     "As she turns to me, the smile drops from her face."
     "It's as though she has seen a ghost."
@@ -207,25 +204,29 @@ label c1_fin:
 
     $ renpy.movie_cutscene("videos/enc.webm", delay=None, loops=0, stop_music=False)
 
+    show hitomi shocked at center
+ 
     y "Are you alright...?"
 
-##hitomi shockedtalking
-
+    show hitomi confused
     g "Yu...?"
     g "Yu Sato?"
 
     "Why does she know my name?"
 
+    show hitomi confused2
     g "Your name is Yu, isn't it...?"
 
     y "Yes..."
 
+    show hitomi ecstatic
     g "Oh my god!"
 
     h "It's me! Hitomi!"
-
+    show hitomi smilingeyesclosed
     h "Hitomi Yoshinaga, from junior high school!"
 
+    show hitomi smilingquiet
     y "Oh..."
     y "Yeah. I remember you."
 
@@ -233,40 +234,47 @@ label c1_fin:
 
     y "Nice to see you again."
 
+    show hitomi smilingeyesopenht
     h "You too!"
     h "It's been too long!"
 
 ## SKIP POINT
     $ renpy.stop_skipping()
 
+    show hitomi smilingupstreet
+
     "Hitomi turns to look at the group of girls, who are now farther up the street."
     "Their voices echo by, dissipating just beyond where Hitomi and I stand."
 
+
+    show hitomi smilingtalkingupstreet
     h "I should go."
     h "They're going to leave me behind."
-
+    show hitomi smilingupstreet
     "She laughs as she says it, but her final giggle reveals the truth as it fades into a quiet sigh."
 
+    show hitomi smilingquiet
     "Hitomi turns back to me."
 
-##hitomi nervous
+    show hitomi confused2
     h "Hey..."
-##hitomi nervouslookingaside...
     h "We-"
-##hitomi excited
+    show hitomi ecstatic
     h "We should hang out soon!"
-##hitomisoftsmiletalking
+    show hitomi smilingeyesclosed
     h "It would be nice to catch up."
-##hitomi smiling quiet
+    show hitomi smilingquiet
     "Her eyes soften with her smile."
-    "She looks deep into my eyes, like she's trying to figure out what I am going to say next..."
+    "She looks deep into mine, like she's trying to figure out what I am going to say next..."
 
     y "Well, I don't really..."
 
+    show hitomi ecstatic
     h "I know! Let's swap numbers!"
 
     y "..."
     y "Okay..."
+    show hitomi smilingeyesclosed
     y "Sure."
 
 ##hitomi hand out
@@ -277,6 +285,7 @@ label c1_fin:
 
     "She holds my phone back out to me, and puts hers away simultaneously."
 
+##BG CHANGE
     "As I take it from her hand, she jogs off towards her friends."
 
     "Hesitating slightly, she turns back."
@@ -298,7 +307,12 @@ label c1_fin:
 
     "The contact name reads..."
 
-    "Hitomi <3"
+    scene bg hitomi
+    " "
+
+    stop music
+
+    stop sound
 
 label texting:
 
