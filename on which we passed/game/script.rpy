@@ -392,7 +392,118 @@ label texting:
     y "Sounds good.<"
     y "I'll see you there.<"
 
-    hheart ">See you!"
+    hheart ">See you :)"
+
+label chapter2start:
+
+    stop music
+
+    stop sound
+
+    stop audio
+
+## SKIP POINT
+    $ renpy.stop_skipping()
+
+    scene bg preview
+
+    "The incessant hum of people speaking around me rises in volume with each minute."
+
+    "Every time the entry bell rings, I turn to look."
+
+    "It's never Hitomi."
+
+    "Maybe she's not coming..."
+
+    "Shit."
+
+    "Of course she's not."
+
+    "I wouldn't."
+
+    "That's probably what her friends were yelling."
+
+    "It was the plan."
+
+    "This whole thing was a cruel prank."
+
+    "I didn't even want to do this."
+
+##DOOR DING SOUND
+
+##HITOMI IS TALKING TO WORKER BY THE COUNTER
+
+    h "Hey."
+
+    h "I hope that I didn't make you wait too long?"
+    h "It seems like you've been here a while."
+
+    y "I have, but I chose to come here pretty early."
+    y "I don't get out very much,"
+    y "so I try to give myself some time to acclimate."
+
+    h "I see."
+
+    h "Well, I'm glad that you agreed to come out to meet with me!"
+
+    y "I thought about what you said..."
+    y "And I guess that I decided it would be nice to catch up."
+
+    h "Woah!"
+    h "There he is!"
+
+    h "I never thought I would see my Yu Sato again!"
+
+    "I feel..."
+    "Strange."
+
+    "Safe."
+
+    "Like I could almost laugh too."
+
+    "It's been a long time since I've felt this way."
+
+    y "Sorry..."
+
+    h "Jeez..."
+    h "You apologize too much!"
+
+    y "Yeah..."
+
+    "A moment of silence falls between us."
+    "The air fills stiffer than before Hitomi arrived."
+
+    "Things are falling apart..."
+    "Back to the way that they were."
+
+    "Everything."
+    "Always."
+    "Returns."
+
+    h "Hey..."
+    h "Yu...?"
+
+    "I'm brought back out of it."
+
+    y "Yeah?"
+
+    h "I'm sorry if it feels like I'm being too forward..."
+    h "But, can I ask you something that might be a little personal?"
+
+    y "Sure."
+
+    h "What happened to you in junior high school?"
+
+##The scene with izumi will have to be an animation so that there is no dialogue box visible on the screen
+##unless I can find a way to hide it??
+
+    scene bg izumi
+
+    "..."
+
+    scene bg hitomitable
+
+    y "What...?"
 
 ## SKIP POINT
     $ renpy.stop_skipping()
