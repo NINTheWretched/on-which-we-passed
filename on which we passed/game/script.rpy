@@ -503,7 +503,93 @@ label chapter2start:
 
     scene bg hitomitable
 
-    y "What...?"
+    y "Huh...?"
+
+    h "You just seemed to become..."
+    h "Distant."
+
+    scene bg izumi
+
+    "..."
+
+    scene bg hitomitable
+
+    y "Distant...?"
+
+    scene bg izumi
+
+    "..."
+
+    scene bg yu(introspective)
+
+    y "Distant..."
+
+    scene bg izumi
+
+    "..."
+
+    scene bg hitomitable
+
+    y "Distant..."
+
+    scene bg yu(introspective)
+
+    y "Distant."
+
+    scene bg izumi
+
+    y "Izumi..."
+
+    i "Yu..."
+
+    h "Yu...?"
+
+    h "Hey, Yu?"
+
+    scene bg hitomitable
+
+    h "Are you okay?"
+
+    y "What?..."
+    y "Oh..."
+
+    y "Shit."
+
+    y "S- Sorry..."
+
+    h "No, I'm sorry."
+    h "I didn't mean to upset you."
+
+    y "No, it's..."
+
+    h "We can skip past that."
+    h "let's talk about something else."
+
+    y "No."
+
+    "My heart has grown nails."
+    "Like it's clawing at my throat to get out."
+
+    y "I need to say this."
+    y "Someone other than me should now."
+
+    "I feel selfish."
+    "Am I shoving my problems off on someone else, so that I will have to carry less of a burden?"
+
+    y "My sister, Izumi, took her own life when I was fourteen."
+
+    h "W-"
+    h "What...?"
+
+    y "She stepped into an oncoming train."
+    y "It killed her immediately."
+
+    h "Yu..."
+
+    y "My mom passed away when we were young."
+    y "I can't even remember her face."
+    y "I've only ever seen her in photos."
+
 
 ## SKIP POINT
     $ renpy.stop_skipping()
