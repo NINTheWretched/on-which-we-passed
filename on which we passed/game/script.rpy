@@ -19,6 +19,32 @@ label start:
 
     stop music
 
+    scene bg cw
+
+    "This game contains sensitive material over the topics of self harm and sexual abuse."
+
+    "Do you still wish to continue?"
+
+menu:
+
+    "Yes.":
+        jump c1_yes
+
+    "No.":
+        jump c1_no
+
+label c1_yes:
+
+    jump c1_cont
+
+label c1_no:
+
+    $ menu_flag = False
+
+    return
+
+label c1_cont:
+
     scene bg yusroom
 
     play sound "audio/computer_hum.mp3" loop
@@ -394,6 +420,8 @@ label texting:
 
     hheart ">See you :)"
 
+    stop music
+
 label chapter2start:
 
     stop music
@@ -405,7 +433,7 @@ label chapter2start:
 ## SKIP POINT
     $ renpy.stop_skipping()
 
-    scene bg preview
+    scene bg cafewide
 
     "The incessant hum of people speaking around me rises in volume with each minute."
 
@@ -413,9 +441,13 @@ label chapter2start:
 
     "It's never Hitomi."
 
+    scene bg cafeoutside
+
     "Maybe she's not coming..."
 
     "Shit."
+
+    scene bg yuhands
 
     "Of course she's not."
 
@@ -423,17 +455,28 @@ label chapter2start:
 
     "That's probably what her friends were yelling."
 
+    scene bg enc
+
     "It was the plan."
 
     "This whole thing was a cruel prank."
 
+    scene bg black
+
     "I didn't even want to do this."
+
 
 ##DOOR DING SOUND
 
-##HITOMI IS TALKING TO WORKER BY THE COUNTER
+    $ renpy.movie_cutscene("videos/hitnotice.webm", delay=None, loops=0, stop_music=False)
 
-    h "Hey."
+label talks:
+    
+    scene bg black
+
+    h "Hey..."
+
+    scene bg hitomienter
 
     h "I hope that I didn't make you wait too long?"
     h "It seems like you've been here a while."
@@ -590,6 +633,191 @@ label chapter2start:
     y "I can't even remember her face."
     y "I've only ever seen her in photos."
 
+##show hitomi sitting shocked and quietly
+
+    y "That night, I lost my closest friend-"
+    y "-and my dad..."
+    y "My dad lost all he had left."
+
+    y "I wasn't sure that he ever liked me..."
+    y "But, I found out after Izumi-"
+
+    "I'm choking up."
+    "I can't say it."
+    "What am I doing?"
+    "Why am I telling her these things?"
+
+    "I just need someone to hear me."
+    "I don't care who it is."
+
+    y "After Izumi..."
+    y "I moved away."
+    y "My dad and I no longer talk."
+
+    y "Couldn't even tell you where he lives..."
+
+    h "I'm..."
+    h "I'm so sorry."
+
+    y "It's just something I live with now."
+    y "Memories."
+
+    y "I drifted away in junior high pretty bad."
+    y "I lost my friends and my grades slipped."
+    y "I guess that I realized that I had a lot less in the world."
+
+    h "You don't need to keep telling me..."
+
+    y "I've been alone ever since."
+
+##hitomis face fills with dread
+
+    h "Please."
+
+    y "It's why I-"
+
+##hitomi jumps out of her seat and slams her hands on the table.
+    h "STOP!"
+
+    "Her face."
+    "She's..."
+    "Crying."
+
+    "I barely even realized that the restaurant had fallen silent."
+    "The hum in the air isn't even present anymore."
+    "There is no noise."
+
+    h "Please..."
+
+    "Why did I do this?"
+    "This was a stupid idea anyways."
+
+    h "Yu..."
+
+    "I should have never come here."
+
+    h "Yu."
+
+    "Keep walking."
+
+    h "Yu!"
+
+    "The door of the cafe opens to the street."
+
+    "Keep walking."
+
+    h "YU!"
+
+    "Keep walking...?"
+
+menu:
+
+    "Yes.":
+        jump p1_yes
+
+    "No, I want to turn around.":
+        jump c1_idka
+
+label p1_yes:
+
+    jump p1_a
+
+label c1_idka:
+
+    $ menu_flag = False
+
+    "It seems like you've done enough."
+
+    "What will you say to her?"
+
+    "Is it really worth it?"
+
+    menu:
+        "Stop it.":
+            jump p2_through
+
+        "Wait...":
+            $ menu_flag = False
+            jump p2_through
+
+    jump p1_a
+
+label p1_a:
+
+label p2_through:
+
+label cafestreet:
+
+    "I let go of the door."
+
+    "But my hand is..."
+    "Warm."
+    "It's all warm."
+    "It's not my hand."
+
+    "I turn around to see Hitomi standing behind me."
+
+    "Her hand is clinging onto mine."
+
+    h "I told you..."
+    h "I told you that I wanted to catch up."
+    h "Didn't I?"
+
+label flashes:
+
+    "Hitomi forced me to get out of the house more and more often."
+
+    "It didn't matter how much I hated it,"
+    "or how little I wanted to go."
+
+    "I ended up with her anyways."
+
+    "Her favorite place to eat is Mrs. Donut."
+
+    "Days are creeping into weeks..."
+    "Weeks into months."
+
+    "Her favorite color, white."
+
+    "A construct."
+
+    "Her favorite thing about me is my composure."
+
+    "That's what it feels like."
+    "Like I am watching it happen from the outside."
+
+    "She's an only child."
+
+    "Am I truly happy?"
+    "Or am I just going through the motions?"
+
+    "She wants to be a UNIKO model."
+
+    "Is this all there is for me?"
+
+    "This is it."
+    "This is me."
+
+    "Lunches, art exhibits, walks in the parl."
+
+    "I am no longer who I once was."
+
+    "But I can't tell if I am what I wanted to be."
+
+    "It's still there."
+    "Somewhere..."
+
+    "Is this what she wanted for herself?"
+
+    "Was this the right choice?"
+
+    h "Hey, Yu...?"
+
+    y "Mhm?"
+
+    h "Would you-"
+    h "Would you want to go to the Sumigawa Fireworks Festival with me?"
+
 
 ## SKIP POINT
     $ renpy.stop_skipping()
@@ -600,6 +828,18 @@ label chapter2start:
     # This ends the game.
     return
 
-    stop music
-
 ##easter egg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
