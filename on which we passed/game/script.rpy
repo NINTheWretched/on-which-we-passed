@@ -435,6 +435,8 @@ label chapter2start:
 
     scene bg cafewide
 
+    play music "audio/pmu_cafe.mp3" loop
+
     "The incessant hum of people speaking around me rises in volume with each minute."
 
     "Every time the entry bell rings, I turn to look."
@@ -481,21 +483,32 @@ label talks:
     h "I hope that I didn't make you wait too long?"
     h "It seems like you've been here a while."
 
+    scene bg ythought
+
     y "I have, but I chose to come here pretty early."
     y "I don't get out very much,"
     y "so I try to give myself some time to acclimate."
+
+
+    scene bg yuthought2
 
     h "I see."
 
     h "Well, I'm glad that you agreed to come out to meet with me!"
 
+    scene bg ythought
+
     y "I thought about what you said..."
     y "And I guess that I decided it would be nice to catch up."
+
+    scene bg hitomiwoah
 
     h "Woah!"
     h "There he is!"
 
     h "I never thought I would see my Yu Sato again!"
+
+    scene bg hitomiwoahcl
 
     "I feel..."
     "Strange."
@@ -506,12 +519,39 @@ label talks:
 
     "It's been a long time since I've felt this way."
 
+menu:
+
+    "Apologize.":
+        jump a1_sorry
+
+    "Refuse change.":
+        jump a1_ly
+
+label a1_sorry:
+
     y "Sorry..."
+
+    scene bg hitomijeez
 
     h "Jeez..."
     h "You apologize too much!"
 
     y "Yeah..."
+
+    scene bg hitomithink
+
+    "We sit in silence for a moment."
+
+    jump a1_cont
+
+label a1_ly: 
+
+    $ menu_flag = False
+
+##hitomi and yutogether distorted
+
+
+    scene bg hitomithink
 
     "A moment of silence falls between us."
     "The air fills stiffer than before Hitomi arrived."
@@ -519,67 +559,106 @@ label talks:
     "Things are falling apart..."
     "Back to the way that they were."
 
+##please help me
+
     "Everything."
     "Always."
     "Returns."
 
+    jump a1_cont
+
+label a1_cont:
+
+    scene bg hitomijeez
+
+    stop music
+
+    play music "audio/oh_boy_ok.mp3" loop
+
     h "Hey..."
     h "Yu...?"
+
+    scene bg hitomithink
 
     "I'm brought back out of it."
 
     y "Yeah?"
+
+    scene bg whathap
 
     h "I'm sorry if it feels like I'm being too forward..."
     h "But, can I ask you something that might be a little personal?"
 
     y "Sure."
 
+    scene bg hitomimouth
+
     h "What happened to you in junior high school?"
+
+## SKIP POINT
+    $ renpy.stop_skipping()
+
+    "END OF CHAPTER 2."
+    "THANK YOU FOR PLAYING."
+
+    # This ends the game.
+    return
 
 ##The scene with izumi will have to be an animation so that there is no dialogue box visible on the screen
 ##unless I can find a way to hide it??
 
     scene bg izumi
+    play sound "audio/static.mp3" fadein 1.0 volume 0.1 loop
 
     "..."
 
-    scene bg hitomitable
+    stop sound
+
+    scene bg whathapquiet
 
     y "Huh...?"
+
+    scene bg whathap
 
     h "You just seemed to become..."
     h "Distant."
 
     scene bg izumi
+    play sound "audio/static.mp3" fadein 1.0 volume 0.1 loop
 
     "..."
 
-    scene bg hitomitable
+    stop sound
+    scene bg whathapquiet
 
     y "Distant...?"
 
     scene bg izumi
 
+    play sound "audio/static.mp3" fadein 1.0 volume 0.2 loop
     "..."
 
-    scene bg yu(introspective)
+    stop sound
+    scene bg whathapquiet
 
-    y "Distant..."
+    "Distant..."
 
     scene bg izumi
+    play sound "audio/static.mp3" fadein 1.0 volume 0.3 loop
 
     "..."
 
-    scene bg hitomitable
+    stop sound
+    scene bg whathapquiet
 
-    y "Distant..."
+    "Distant..."
 
-    scene bg yu(introspective)
+    scene bg ilyt
 
-    y "Distant."
+    "..."
 
     scene bg izumi
+    play sound "audio/static.mp3" fadein 1.0 volume 0.5 loop
 
     y "Izumi..."
 
@@ -588,6 +667,8 @@ label talks:
     h "Yu...?"
 
     h "Hey, Yu?"
+
+    stop sound
 
     scene bg hitomitable
 
@@ -613,68 +694,19 @@ label talks:
     "My heart has grown nails."
     "Like it's clawing at my throat to get out."
 
-    y "I need to say this."
-    y "Someone other than me should now."
-
-    "I feel selfish."
-    "Am I shoving my problems off on someone else, so that I will have to carry less of a burden?"
-
-    y "My sister, Izumi, took her own life when I was fourteen."
-
-    h "W-"
-    h "What...?"
-
-    y "She stepped into an oncoming train."
-    y "It killed her immediately."
-
-    h "Yu..."
-
-    y "My mom passed away when we were young."
-    y "I can't even remember her face."
-    y "I've only ever seen her in photos."
-
-##show hitomi sitting shocked and quietly
-
-    y "That night, I lost my closest friend-"
-    y "-and my dad..."
-    y "My dad lost all he had left."
-
-    y "I wasn't sure that he ever liked me..."
-    y "But, I found out after Izumi-"
-
     "I'm choking up."
     "I can't say it."
     "What am I doing?"
-    "Why am I telling her these things?"
+    "Why do I want to tell her these things?"
 
     "I just need someone to hear me."
     "I don't care who it is."
-
-    y "After Izumi..."
-    y "I moved away."
-    y "My dad and I no longer talk."
-
-    y "Couldn't even tell you where he lives..."
-
-    h "I'm..."
-    h "I'm so sorry."
-
-    y "It's just something I live with now."
-    y "Memories."
-
-    y "I drifted away in junior high pretty bad."
-    y "I lost my friends and my grades slipped."
-    y "I guess that I realized that I had a lot less in the world."
-
-    h "You don't need to keep telling me..."
-
-    y "I've been alone ever since."
 
 ##hitomis face fills with dread
 
     h "Please."
 
-    y "It's why I-"
+    y "I-"
 
 ##hitomi jumps out of her seat and slams her hands on the table.
     h "STOP!"
@@ -682,6 +714,10 @@ label talks:
     "Her face."
     "She's..."
     "Crying."
+
+    stop music
+    stop sound
+    stop audio
 
     "I barely even realized that the restaurant had fallen silent."
     "The hum in the air isn't even present anymore."
@@ -694,7 +730,10 @@ label talks:
 
     h "Yu..."
 
-    "I should have never come here."
+    y "I should have never come."
+    y "I'm sorry."
+
+    "Walk."
 
     h "Yu."
 
@@ -772,33 +811,55 @@ label flashes:
 
     "I ended up with her anyways."
 
+    scene bg mrsdonut
+
     "Her favorite place to eat is Mrs. Donut."
 
     "Days are creeping into weeks..."
     "Weeks into months."
 
+    scene bg favcolor
+
     "Her favorite color, white."
 
     "A construct."
+
+    scene bg const
 
     "Her favorite thing about me is my composure."
 
     "That's what it feels like."
     "Like I am watching it happen from the outside."
 
+    scene bg break1
+
     "She's an only child."
 
     "Am I truly happy?"
     "Or am I just going through the motions?"
 
-    "She wants to be a UNIKO model."
+    scene bg andicant
+
+    "She wants to be an UNIKO model."
 
     "Is this all there is for me?"
+
+    scene bg questionyourself
 
     "This is it."
     "This is me."
 
-    "Lunches, art exhibits, walks in the parl."
+    scene bg food
+
+    "Lunches."
+
+    scene bg artex
+
+    "Art exhibits."
+
+    scene bg park
+
+    "Walks in the park."
 
     "I am no longer who I once was."
 
@@ -816,30 +877,6 @@ label flashes:
     y "Mhm?"
 
     h "Would you-"
-    h "Would you want to go to the Sumigawa Fireworks Festival with me?"
-
-
-## SKIP POINT
-    $ renpy.stop_skipping()
-
-    "END OF DEMO."
-    "THANK YOU FOR PLAYING."
-
-    # This ends the game.
-    return
+    h "Would you want to go to the Sumigawa Fireworks Festival with me...?"
 
 ##easter egg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
