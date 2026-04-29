@@ -681,6 +681,9 @@ label a1_cont:
 
     h "Are you okay?"
 
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     scene bg hitruok2
 
     y "What?..."
@@ -711,6 +714,9 @@ label a1_cont:
     scene bg heart
 
     "My heart has grown nails."
+
+## SKIP POINT
+    $ renpy.stop_skipping()
     "Like it's clawing at my throat to get out."
 
     "I'm choking up."
@@ -736,6 +742,9 @@ label a1_cont:
 
     h "Stop."
 
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     scene bg hitomicry
 
     "..."
@@ -754,6 +763,10 @@ label a1_cont:
     scene bg cafewide
 
     "Why did I do this?"
+
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     y "This was a stupid idea."
 
     h "Yu..."
@@ -825,6 +838,9 @@ label p1_a:
 
     "I let go of the door."
 
+## SKIP POINT
+    $ renpy.stop_skipping()
+
 label p2_through:
 
     "My hand is..."
@@ -841,6 +857,10 @@ label p2_through:
     scene bg toknowyou
 
     h "I told you..."
+
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     h "I told you that I wanted to catch up."
     h "Didn't I?"
 
@@ -909,6 +929,9 @@ label flashes:
 
     "I am no longer who I once was."
 
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     "But I can't tell if I am who I wanted to be."
     "I can't tell if she's who she wanted to be either."
 
@@ -925,6 +948,9 @@ label flashes:
     h "Would you want to go to the Sumigawa Fireworks Festival with me...?"
 
     "END OF CHAPTER 2."
+
+## SKIP POINT
+    $ renpy.stop_skipping()
 
     $ renpy.movie_cutscene("videos/owwp_credits.webm", delay=None, loops=0, stop_music=False)
 
