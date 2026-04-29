@@ -463,6 +463,9 @@ label chapter2start:
 
     "This whole thing was a cruel prank."
 
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     scene bg black
 
     "I didn't even want to do this."
@@ -488,6 +491,9 @@ label talks:
     y "I have, but I chose to come here pretty early."
     y "I don't get out very much,"
     y "so I try to give myself some time to acclimate."
+
+## SKIP POINT
+    $ renpy.stop_skipping()
 
 
     scene bg yuthought2
@@ -518,6 +524,9 @@ label talks:
     "Like I could almost laugh too."
 
     "It's been a long time since I've felt this way."
+
+## SKIP POINT
+    $ renpy.stop_skipping()
 
 menu:
 
@@ -584,6 +593,9 @@ label a1_cont:
 
     y "Yeah?"
 
+## SKIP POINT
+    $ renpy.stop_skipping()
+
     scene bg whathap
 
     h "I'm sorry if it feels like I'm being too forward..."
@@ -598,11 +610,6 @@ label a1_cont:
 ## SKIP POINT
     $ renpy.stop_skipping()
 
-    "END OF CHAPTER 2."
-    "THANK YOU FOR PLAYING."
-
-    # This ends the game.
-    return
 
 ##The scene with izumi will have to be an animation so that there is no dialogue box visible on the screen
 ##unless I can find a way to hide it??
@@ -670,9 +677,11 @@ label a1_cont:
 
     stop sound
 
-    scene bg hitomitable
+    scene bg hitruok
 
     h "Are you okay?"
+
+    scene bg hitruok2
 
     y "What?..."
     y "Oh..."
@@ -681,15 +690,25 @@ label a1_cont:
 
     y "S- Sorry..."
 
+    scene bg hitruok
+
     h "No, I'm sorry."
     h "I didn't mean to upset you."
 
+    scene bg hitruok2
+
     y "No, it's..."
+
+    scene bg hitruok
 
     h "We can skip past that."
     h "let's talk about something else."
 
+    scene bg hitruok2
+
     y "No."
+
+    scene bg heart
 
     "My heart has grown nails."
     "Like it's clawing at my throat to get out."
@@ -702,40 +721,55 @@ label a1_cont:
     "I just need someone to hear me."
     "I don't care who it is."
 
-##hitomis face fills with dread
+    scene bg black
 
-    h "Please."
-
-    y "I-"
-
-##hitomi jumps out of her seat and slams her hands on the table.
-    h "STOP!"
-
-    "Her face."
-    "She's..."
-    "Crying."
+    h "Please..."
 
     stop music
     stop sound
     stop audio
 
+    scene bg hitbeg
+
+    play sound "audio/static.mp3" fadein 1.0 volume 0.6 loop
+    play music "audio/breakdown.mp3" loop
+
+    h "Stop."
+
+    scene bg hitomicry
+
+    "..."
+    "Her face."
+    "She's..."
+    "Crying."
+
+    scene bg static
+
     "I barely even realized that the restaurant had fallen silent."
-    "The hum in the air isn't even present anymore."
-    "There is no noise."
+    "My head is filled with static."
+    "All this noise."
 
     h "Please..."
 
+    scene bg cafewide
+
     "Why did I do this?"
-    "This was a stupid idea anyways."
+    y "This was a stupid idea."
 
     h "Yu..."
+
+    scene bg standup
 
     y "I should have never come."
     y "I'm sorry."
 
+    scene bg keepwalking2
+
     "Walk."
 
     h "Yu."
+
+    scene bg keepwalking3
 
     "Keep walking."
 
@@ -743,9 +777,15 @@ label a1_cont:
 
     "The door of the cafe opens to the street."
 
+    scene bg reach
+
     "Keep walking."
 
+    scene bg hitomistop
+
     h "YU!"
+
+    scene bg black
 
     "Keep walking...?"
 
@@ -783,26 +823,32 @@ label c1_idka:
 
 label p1_a:
 
-label p2_through:
-
-label cafestreet:
-
     "I let go of the door."
 
-    "But my hand is..."
+label p2_through:
+
+    "My hand is..."
     "Warm."
     "It's all warm."
     "It's not my hand."
+
+    scene bg handhold
 
     "I turn around to see Hitomi standing behind me."
 
     "Her hand is clinging onto mine."
 
+    scene bg toknowyou
+
     h "I told you..."
     h "I told you that I wanted to catch up."
     h "Didn't I?"
 
+    stop sound
+
 label flashes:
+
+    scene bg city
 
     "Hitomi forced me to get out of the house more and more often."
 
@@ -863,20 +909,30 @@ label flashes:
 
     "I am no longer who I once was."
 
-    "But I can't tell if I am what I wanted to be."
+    "But I can't tell if I am who I wanted to be."
+    "I can't tell if she's who she wanted to be either."
 
-    "It's still there."
-    "Somewhere..."
+    "Today,"
+    "as we stared at the clouds"
+    "she asked me..."
 
-    "Is this what she wanted for herself?"
-
-    "Was this the right choice?"
+    scene bg sky
 
     h "Hey, Yu...?"
 
     y "Mhm?"
 
-    h "Would you-"
     h "Would you want to go to the Sumigawa Fireworks Festival with me...?"
+
+    "END OF CHAPTER 2."
+
+    $ renpy.movie_cutscene("videos/owwp_credits.webm", delay=None, loops=0, stop_music=False)
+
+    stop music
+    stop sound
+    stop audio
+
+    # This ends the game.
+    return
 
 ##easter egg
