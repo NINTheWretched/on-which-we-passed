@@ -530,10 +530,10 @@ label talks:
 
 menu:
 
-    "Apologize.":
+    "'I'm sorry.'":
         jump a1_sorry
 
-    "Refuse change.":
+    "Internalize.":
         jump a1_ly
 
 label a1_sorry:
@@ -710,6 +710,7 @@ label a1_cont:
     scene bg hitruok2
 
     y "No."
+    y "We need to talk about it."
 
     scene bg heart
 
@@ -724,8 +725,22 @@ label a1_cont:
     "What am I doing?"
     "Why do I want to tell her these things?"
 
+    y "Back in school-"
+
+    h "Yu."
+    h "Stop."
+
     "I just need someone to hear me."
     "I don't care who it is."
+
+    y "No."
+    y "I need this."
+
+    h "Stop."
+
+    y "NO!"
+
+    h "STOP!"
 
     scene bg black
 
@@ -741,6 +756,11 @@ label a1_cont:
     play music "audio/breakdown.mp3" loop
 
     h "Stop."
+
+    y "I knew it."
+
+    y "You don't actually want to talk to me."
+    y "You're like everyone else who walks by."
 
 ## SKIP POINT
     $ renpy.stop_skipping()
@@ -812,6 +832,11 @@ menu:
 
 label p1_yes:
 
+    "Good for you."
+    "It wasn't going anywhere."
+    "She's just another parasite anyways."
+    "They only cling to you when they realize they'll die on their own."
+
     jump p1_a
 
 label c1_idka:
@@ -824,11 +849,13 @@ label c1_idka:
 
     "Is it really worth it?"
 
+    "You know it will end, regardless of what you do."
+
     menu:
-        "Stop it.":
+        "You're right.":
             jump p2_through
 
-        "Wait...":
+        "You're right.":
             $ menu_flag = False
             jump p2_through
 
@@ -836,12 +863,12 @@ label c1_idka:
 
 label p1_a:
 
+label p2_through:
+
     "I let go of the door."
 
 ## SKIP POINT
     $ renpy.stop_skipping()
-
-label p2_through:
 
     "My hand is..."
     "Warm."
